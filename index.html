@@ -3,134 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>岡田 晃輝 | ポートフォリオ＆技術ブログ</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; --muted: #94a3b8; --border: #334155; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-        body { background-color: var(--bg); color: var(--text); padding: 20px; max-width: 900px; margin: 0 auto; line-height: 1.6; }
-        header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
-        h1 { color: var(--accent); font-size: 1.8rem; }
-
-        /* タブナビゲーション */
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid var(--border); }
-        .tab-btn { background: none; border: none; color: var(--muted); padding: 10px 20px; font-size: 1rem; cursor: pointer; border-bottom: 3px solid transparent; transition: 0.3s; }
-        .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: bold; }
-
-        /* コンテンツエリア */
-        .tab-content { display: none; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 25px; }
-        .tab-content.active { display: block; }
-
-        h2 { color: var(--accent); font-size: 1.3rem; margin-bottom: 15px; border-left: 4px solid var(--accent); paddingEOFtml>cript>vent.currentTarget.classList.add('active');dd('active'););作させ、温度センサーのデータをWebUI上に表示するシ
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>岡田 晃輝 | ポートフォリオ＆技術ブログ</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; --muted: #94a3b8; --border: #334155; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-        body { background-color: var(--bg); color: var(--text); padding: 20px; max-width: 900px; margin: 0 auto; line-height: 1.6; }
-        header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
-        h1 { color: var(--accent); font-size: 1.8rem; }
-
-        /* タブナビゲーション */
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid var(--border); }
-        .tab-btn { background: none; border: none; color: var(--muted); padding: 10px 20px; font-size: 1rem; cursor: pointer; border-bottom: 3px solid transparent; transition: 0.3s; }
-        .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: bold; }
-
-        /* コンテンツエリア */
-        .tab-content { display: none; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 25px; }
-        .tab-content.active { display: block; }
-
-        h2 { color: var(--accent); font-size: 1.3rem; margin-bottom: 15px; border-left: 4px solid var(--accent); padding-left: 10px; }
-        ul { margin-left: 20px; margin-bottom: 15px; }
-        li { margin-bottom: 8px; }
-
-        /* ブログカード */
-        .blog-post { background: #020617; border: 1px solid var(--border); border-radius: 6px; padding: 15px; margin-bottom: 15px; }
-        .blog-title { color: var(--accent); font-size: 1.1rem; font-weight: bold; margin-bottom: 5px; }
-        .blog-date { color: var(--muted); font-size: 0.8rem; margin-bottom: 10px; }
-        code { background: #334155; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>OKADA KOKI PORTFOLIO</h1>
-        <p style="color:var(--muted);">IT Field Engineer & System Development</p>
-    </header>
-
-    <!-- タブボタン -->
-    <div class="tabs">
-        <button class="tab-btn active" onclick="openTab('profile')"><i class="fa-solid fa-user"></i> 自己紹介・趣味</button>
-        <button class="tab-btn" onclick="openTab('blog')"><i class="fa-solid fa-book"></i> 技術ブログ・学習記録</button>
-    </div>
-
-    <!-- タブ1: 自己紹介・趣味 -->
-    <div id="profile" class="tab-content active">
-        <h2>プロフィール</h2>
-        <p>ITフィールドエンジニアおよびシステム開発を志望し、日々インフラ・プログラミングの学習に取り組んでいます。</p>
-        <br>
-        <h2>趣味・関心</h2>
-        <ul>
-            <li><strong>3Dゲーム開発・プログラミング:</strong> UnityやPythonを使った開発、電子工作（Raspberry Pi等）への挑戦</li>
-            <li><strong>トレーニング:</strong> 日々のボディメイクやHIITトレーニングによる自己管理</li>
-            <li><strong>ゲーム:</strong> FPSゲーム（VALORANT等）でのチーム連携や戦術構築</li>
-        </ul>
-    </div>
-
-    <!-- タブ2: 技術ブログ・学習記録 -->
-    <div id="blog" class="tab-content">
-        <h2>技術ブログ・検証ナレッジ</h2>
-
-        <div class="blog-post">
-            <div class="blog-title">WSL2(Ubuntu)+Apacheでページが切り替わらない原因の特定と解決</div>
-            <div class="blog-date">2026-04-16</div>
-            <p><strong>概要:</strong> Webサーバ設定の書き換えを行った際、更新が反映されないトラブルが発生。ログと有効化設定の切り分けを行いました。</p>
-            <br>
-            <p><strong>解決手順:</strong></p>
-            <ul>
-                <li><code>curl http://localhost</code> でブラウザキャッシュではなくサーバ応答の問題と特定</li>
-                <li><code>ls -l /etc/apache2/sites-enabled/</code> で競合している設定（sample-site.conf）を発見</li>
-                <li><code>sudo a2dissite sample-site.conf</code> で不要設定を無効化し解決</li>
-            </ul>
-        </div>
-
-        <div class="blog-post">
-            <div class="blog-title">Raspberry PiとLinux環境を使ったセンサー制御システムの構築</div>
-            <div class="blog-date">2026-04-01</div>
-            <p><strong>概要:</strong> Linux環境下でPythonプログラムを動作させ、温度センサーのデータをWebUI上に表示するシステムを構築・検証しました。</p>
-        </div>
-    </div>
-
-    <script>
-        function openTab(tabName) {
-            // すべてのコンテンツとボタンを非アクティブ化
-            const contents = document.querySelectorAll('.tab-content');
-            const buttons = document.querySelectorAll('.tab-btn');
-
-            contents.forEach(c => c.classList.remove('active'));
-            buttons.forEach(b => b.classList.remove('active'));
-
-            // 選択されたタブとボタンをアクティブ化
-            document.getElementById(tabName).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-    </script>
-
-</body>
-</html>
-dming@DESKTOP-OAEDTUJ:/mnt/c/Users/Admin$ sudo chown www-data:www-data /var/www/html/index.html
-sudo service apache2 reload
-dming@DESKTOP-OAEDTUJ:/mnt/c/Users/Admin$ cat << 'EOF' | sudo tee /var/www/html/index.html
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>岡田 晃輝 | ポートフォリオ</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -140,51 +12,30 @@ dming@DESKTOP-OAEDTUJ:/mnt/c/Users/Admin$ cat << 'EOF' | sudo tee /var/www/html/
         header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
         h1 { color: var(--accent); font-size: 1.8rem; margin-bottom: 5px; }
         p.subtitle { color: var(--muted); font-size: 0.9rem; }
-
+        
         /* タブナビゲーション */
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid var(--border); }
-        .tab-btn { background: none; border: none; color: var(--muted); padding: 10px 20px; font-size: 1rem; cursor: pointer; border-bottom: 3px solid transparent; transition: 0.3s; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid var(--border); overflow-x: auto; }
+        .tab-btn { background: none; border: none; color: var(--muted); padding: 10px 18px; font-size: 0.95rem; cursor: pointer; border-bottom: 3px solid transparent; transition: 0.3s; white-space: nowrap; }
         .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: bold; }
-
+        
         /* コンテンツエリア */
         .tab-content { display: none; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 25px; }
         .tab-content.active { display: block; }
-
-        h2 { color: var(--accent); font-size: 1.3rem; margin-bottom: 15px; border-left: 4px solid var(--accent); paddingEOFtml>cript>vent.currentTarget.classList.add('active');dd('active'););> を用いて無効化し正常切り替えを達成しました。</p
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>岡田 晃輝 | ポートフォリオ</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; --muted: #94a3b8; --border: #334155; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-        body { background-color: var(--bg); color: var(--text); padding: 20px; max-width: 900px; margin: 0 auto; line-height: 1.6; }
-        header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
-        h1 { color: var(--accent); font-size: 1.8rem; margin-bottom: 5px; }
-        p.subtitle { color: var(--muted); font-size: 0.9rem; }
-
-        /* タブナビゲーション */
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid var(--border); }
-        .tab-btn { background: none; border: none; color: var(--muted); padding: 10px 20px; font-size: 1rem; cursor: pointer; border-bottom: 3px solid transparent; transition: 0.3s; }
-        .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: bold; }
-
-        /* コンテンツエリア */
-        .tab-content { display: none; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 25px; }
-        .tab-content.active { display: block; }
-
+        
         h2 { color: var(--accent); font-size: 1.3rem; margin-bottom: 15px; border-left: 4px solid var(--accent); padding-left: 10px; }
         .profile-group { margin-bottom: 20px; }
         .profile-group h3 { font-size: 1.05rem; color: #e2e8f0; margin-bottom: 8px; }
         ul { margin-left: 20px; margin-bottom: 15px; }
         li { margin-bottom: 6px; }
-
-        /* ブログカード */
-        .blog-post { background: #020617; border: 1px solid var(--border); border-radius: 6px; padding: 15px; margin-bottom: 15px; }
-        .blog-title { color: var(--accent); font-size: 1.1rem; font-weight: bold; margin-bottom: 5px; }
-        .blog-date { color: var(--muted); font-size: 0.8rem; margin-bottom: 10px; }
+        
+        /* カードデザイン */
+        .card-post { background: #020617; border: 1px solid var(--border); border-radius: 6px; padding: 15px; margin-bottom: 15px; }
+        .card-title { color: var(--accent); font-size: 1.1rem; font-weight: bold; margin-bottom: 5px; }
+        .card-date { color: var(--muted); font-size: 0.8rem; margin-bottom: 10px; }
+        
+        /* リンクボタン */
+        .link-btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: #0f172a; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px; font-size: 0.9rem; }
+        .link-btn:hover { opacity: 0.9; }
         code { background: #334155; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
     </style>
 </head>
@@ -199,6 +50,7 @@ dming@DESKTOP-OAEDTUJ:/mnt/c/Users/Admin$ cat << 'EOF' | sudo tee /var/www/html/
     <div class="tabs">
         <button class="tab-btn active" onclick="openTab('profile')"><i class="fa-solid fa-user"></i> プロフィール・経歴</button>
         <button class="tab-btn" onclick="openTab('blog')"><i class="fa-solid fa-book"></i> 技術ブログ・制作実績</button>
+        <button class="tab-btn" onclick="openTab('links')"><i class="fa-solid fa-link"></i> 連携サイト</button>
     </div>
 
     <!-- タブ1: プロフィール・経歴 -->
@@ -238,17 +90,35 @@ dming@DESKTOP-OAEDTUJ:/mnt/c/Users/Admin$ cat << 'EOF' | sudo tee /var/www/html/
     <div id="blog" class="tab-content">
         <h2>開発実績・技術検証ブログ</h2>
 
-        <div class="blog-post">
-            <div class="blog-title">【高校3年時 製作】Raspberry PiとLinux環境を用いた温度監視システム</div>
-            <div class="blog-date">高校3年（2024年度）製作</div>
-            <p>高校3年生の時に取り組み・完成させたプロジェクトです。Linux環境下のRaspberry Piに温度センサーを接続し、取得したデータをプログラムで処理してWeb画面上にリアルタイム表示するシステムを構築しました。</p>
+        <div class="card-post">
+            <div class="card-title">【高校3年時 製作】Raspberry PiとLinux環境を用いた温度監視システム</div>
+            <div class="card-date">高校3年（2024年度）製作</div>
+            <p>高校3年生の時に取り組んだ開発プロジェクトです。Linux環境下のRaspberry Piに温度センサーを接続し、取得データをプログラムで処理してWeb画面上にリアルタイム表示するシステムを構築しました。</p>
         </div>
 
-        <div class="blog-post">
-            <div class="blog-title">WSL2(Ubuntu)+Apacheでのルーティング競合トラブルの特定と解決</div>
-            <div class="blog-date">2026年4月検証</div>
+        <div class="card-post">
+            <div class="card-title">WSL2(Ubuntu)+Apacheでのルーティング競合トラブルの特定と解決</div>
+            <div class="card-date">2026年4月検証</div>
             <p><strong>問題:</strong> 設定書き換え後も旧画面（sample-site.conf）が表示され続ける現象が発生。</p>
             <p><strong>対応:</strong> <code>curl</code> で応答を切り分け、<code>ls -l /etc/apache2/sites-enabled/</code> から読み込み優先度の高かった不要設定を特定。<code>sudo a2dissite</code> を用いて無効化し正常切り替えを達成しました。</p>
+        </div>
+    </div>
+
+    <!-- タブ3: 連携サイト -->
+    <div id="links" class="tab-content">
+        <h2>外部連携サイト・アカウント</h2>
+        <p style="margin-bottom: 20px; color: var(--muted);">学習のアウトプットやコード管理を行っている外部サービスへのリンクです。</p>
+
+        <div class="card-post">
+            <div class="card-title"><i class="fa-brands fa-github"></i> GitHub</div>
+            <p>ソースコードのバージョン管理やプロジェクトの保管を行っています。</p>
+            <a href="https://github.com/" target="_blank" class="link-btn">GitHubを開く <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+
+        <div class="card-post">
+            <div class="card-title"><i class="fa-solid fa-code"></i> Qiita / 技術ブログ</div>
+            <p>インフラ構築やトラブルシューティングのナレッジをまとめている技術記事一覧です。</p>
+            <a href="https://qiita.com/" target="_blank" class="link-btn">Qiitaを開く <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
     </div>
 
@@ -256,10 +126,10 @@ dming@DESKTOP-OAEDTUJ:/mnt/c/Users/Admin$ cat << 'EOF' | sudo tee /var/www/html/
         function openTab(tabName) {
             const contents = document.querySelectorAll('.tab-content');
             const buttons = document.querySelectorAll('.tab-btn');
-
+            
             contents.forEach(c => c.classList.remove('active'));
             buttons.forEach(b => b.classList.remove('active'));
-
+            
             document.getElementById(tabName).classList.add('active');
             event.currentTarget.classList.add('active');
         }
