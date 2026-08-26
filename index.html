@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koki Okada — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. オープニングアニメーション（名前のフェードアウト） -->
+  <div id="opening" class="opening">
+    <h1 class="opening-name">KOKI OKADA</h1>
+  </div>
+
+  <!-- メインコンテンツ全体 -->
+  <div id="main-content" class="main-content hidden">
+
+    <!-- 2. トップ画面（項目選択メニュー） -->
+    <div id="home-view" class="view active">
+      <header class="header">
+        <div class="container">
+          <a href="#" class="site-title">Koki Okada</a>
+        </div>
+      </header>
+
+      <main class="container">
+        <section class="hero">
+          <p class="hero-tag">Web Writer / Content Creator</p>
+          <h1 class="hero-title">実体験に基づく一次情報と、<br>論理的思考で成果を生むライティング。</h1>
+        </section>
+
+        <!-- カテゴリー選択カード -->
+        <section class="menu-grid">
+          <div class="menu-card" onclick="switchView('about')">
+            <span class="menu-num">01</span>
+            <h2>About</h2>
+            <p>自己紹介・強み・執筆へのこだわり</p>
+          </div>
+          <div class="menu-card" onclick="switchView('experience')">
+            <span class="menu-num">02</span>
+            <h2>Career</h2>
+            <p>学歴・職務経歴・保有スキル</p>
+          </div>
+          <div class="menu-card" onclick="switchView('works')">
+            <span class="menu-num">03</span>
+            <h2>Works</h2>
+            <p>過去の執筆実績・サンプル記事</p>
+          </div>
+          <div class="menu-card" onclick="switchView('services')">
+            <span class="menu-num">04</span>
+            <h2>Services & Price</h2>
+            <p>対応業務内容・料金ガイドライン</p>
+          </div>
+        </section>
+
+        <!-- そのまま下にスクロールするとある「Contact」 -->
+        <section id="contact" class="section-contact">
+          <h2 class="section-label">05 / Contact</h2>
+          <div class="contact-wrapper">
+            <div class="contact-direct">
+              <p>お仕事のご依頼・ご相談は下記フォームまたは直通連絡先より承っております。</p>
+              <div class="contact-info">
+                <p><span>Mail:</span> <a href="mailto:okadakouki0303@gmail.com">okadakouki0303@gmail.com</a></p>
+                <p><span>Tel:</span> <a href="tel:09097532001">090-9753-2001</a></p>
+              </div>
+            </div>
+
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="minimal-form">
+              <div class="form-field">
+                <input type="text" name="name" required placeholder="お名前 / 貴社名">
+              </div>
+              <div class="form-field">
+                <input type="email" name="email" required placeholder="メールアドレス">
+              </div>
+              <div class="form-field">
+                <textarea name="message" rows="4" required placeholder="ご相談内容（概要、ご予算、納期など）"></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message ↗</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2026 Koki Okada. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- 3. 各項目の切り替え詳細画面 -->
+
+    <!-- About 画面 -->
+    <div id="view-about" class="view detail-view">
+      <div class="container">
+        <button class="back-btn" onclick="switchView('home')">← Back to Menu</button>
+        <h2 class="detail-title">01 / About Me</h2>
+        <div class="detail-body">
+          <p class="lead-text">実体験に基づく説得力のある執筆と、情報コースで培ったIT知識・生成AIを活用した効率的なリサーチ力を強みとしています。</p>
+          <div class="detail-card-grid">
+            <div class="detail-box">
+              <h3>一次情報のリアルな記述</h3>
+              <p>4年間の自重トレやメンズ美容の体験談をもとに、読者の悩みに寄り添った再現性の高い構成と文章を提供します。</p>
+            </div>
+            <div class="detail-box">
+              <h3>IT/AIリサーチ＆検証</h3>
+              <p>情報処理の基礎知識をベースに、生成AIを活用した爆速リサーチとファクトチェックを行い、質の高い原稿を作成します。</p>
+            </div>
+            <div class="detail-box">
+              <h3>迅速なレスポンス</h3>
+              <p>丁寧かつスピーディーなコミュニケーションを徹底し、原則24時間以内の返信と厳格な納期遵守をお約束します。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Career 画面 -->
+    <div id="view-experience" class="view detail-view">
+      <div class="container">
+        <button class="back-btn" onclick="switchView('home')">← Back to Menu</button>
+        <h2 class="detail-title">02 / Career & Experience</h2>
+        <div class="detail-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-tag">Education</span>
+              <div>
+                <h3>北海道函館工業高等学校 情報コース 卒業</h3>
+                <p>プログラミング基礎、ネットワーク、情報処理全般を専攻。ITリテラシーの基礎を構築。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-tag">Work</span>
+              <div>
+                <h3>コールセンター / データ入力業務（契約社員）</h3>
+                <p>正確なデータ入力作業と顧客対応を担当。迅速・丁寧な文章作成と対話力を習得。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-tag">Work</span>
+              <div>
+                <h3>接客・ホールスタッフ業務</h3>
+                <p>飲食・アミューズメント店舗にて、ユーザー視点に立ったニーズの汲み取りや柔軟な対応力を習得。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-tag">Dev</span>
+              <div>
+                <h3>Web制作・環境構築</h3>
+                <p>Linux環境（Ubuntu/Apache）でのサーバー構築や、GitHub Pagesを活用したポートフォリオ運用を実践。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Works 画面 -->
+    <div id="view-works" class="view detail-view">
+      <div class="container">
+        <button class="back-btn" onclick="switchView('home')">← Back to Menu</button>
+        <h2 class="detail-title">03 / Works</h2>
+        <div class="detail-body">
+          <div class="works-list">
+            <article class="work-item">
+              <span class="work-cat">構成・執筆 | Note</span>
+              <h3>【ジム不要】芋顔から「見た目変わったね」と褒められた自重トレ戦略</h3>
+              <p>自身の失敗談をもとに、継続率を劇的に上げるコツを論理的に整理した実体験ノウハウ記事。</p>
+              <a href="#" class="work-link">Read Article ↗</a>
+            </article>
+            <article class="work-item">
+              <span class="work-cat">リサーチ・執筆 | Sample</span>
+              <h3>Webライター向けポートフォリオ活用ガイド</h3>
+              <p>GitHub Pagesを活用して企業からの直接受注を狙うための解説コンテンツ。</p>
+              <a href="#" class="work-link">Read Article ↗</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services 画面 -->
+    <div id="view-services" class="view detail-view">
+      <div class="container">
+        <button class="back-btn" onclick="switchView('home')">← Back to Menu</button>
+        <h2 class="detail-title">04 / Services & Price</h2>
+        <div class="detail-body">
+          <div class="services-grid">
+            <div class="service-box">
+              <h3>記事執筆・構成</h3>
+              <p>SEO記事、コラム、実体験レポートの構成案作成〜本文執筆。</p>
+              <span class="price">1.0円〜 / 文字</span>
+            </div>
+            <div class="service-box">
+              <h3>Markdown / WP入稿</h3>
+              <p>WordPressやMarkdown形式での直接入稿・装飾まで一元対応。</p>
+              <span class="price">お気軽にご相談ください</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS処理：アニメーションと画面切り替え -->
+  <script>
+    // ページ読み込み後のオープニングアニメーション
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const opening = document.getElementById('opening');
+        const mainContent = document.getElementById('main-content');
+        
+        opening.classList.add('fade-out');
+        setTimeout(() => {
+          opening.style.display = 'none';
+          mainContent.classList.remove('hidden');
+          mainContent.classList.add('fade-in');
+        }, 800);
+      }, 1800); // 1.8秒間名前を表示
+    });
+
+    // 画面切り替え（SPA風）の処理
+    function switchView(viewName) {
+      const views = document.querySelectorAll('.view');
+      views.forEach(v => {
+        v.classList.remove('active');
+      });
+
+      if (viewName === 'home') {
+        document.getElementById('home-view').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const targetView = document.getElementById('view-' + viewName);
+        if (targetView) {
+          targetView.classList.add('active');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    }
+  </script>
+</body>
+</html>
