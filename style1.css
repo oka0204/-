@@ -1,10 +1,10 @@
 :root {
   --bg-main: #f8fafc;
-  --card-bg: rgba(255, 255, 255, 0.75);
-  --card-border: rgba(255, 255, 255, 0.8);
-  --text-main: #0f172a;
-  --text-sub: #64748b;
-  --accent: #2563eb;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(226, 232, 240, 0.9);
+  --text-main: #0f172a;        /* 濃いネイビー（主文字） */
+  --text-sub: #475569;         /* 視認性を上げた濃いめのグレー（副文字） */
+  --accent: #1d4ed8;           /* 鮮やかなブルー */
   --accent-light: #eff6ff;
   --font-base: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -24,7 +24,6 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 
-  /* 背景に「ふんわりした光」と「立体的な多重グラデーション」を配置 */
   background-image: 
     radial-gradient(at 15% 15%, rgba(37, 99, 235, 0.08) 0px, transparent 40%),
     radial-gradient(at 85% 20%, rgba(99, 102, 241, 0.06) 0px, transparent 40%),
@@ -40,7 +39,7 @@ body {
   padding: 0 24px;
 }
 
-/* 1. オープニング演出 */
+/* オープニング */
 .opening {
   position: fixed;
   top: 0;
@@ -83,7 +82,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 画面切り替え制御 */
 .view {
   display: none;
 }
@@ -93,7 +91,6 @@ body {
   animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ヘッダー */
 .header {
   padding: 40px 0 24px 0;
 }
@@ -106,7 +103,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* ヒーローエリア（写真背景＋オーバレイ） */
+/* ヒーローエリア */
 .hero {
   position: relative;
   border-radius: 20px;
@@ -114,7 +111,7 @@ body {
   padding: 56px 36px;
   margin-bottom: 40px;
   border: 1px solid var(--card-border);
-  background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 100%),
+  background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.8) 100%),
               url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
   backdrop-filter: blur(12px);
@@ -137,7 +134,7 @@ body {
   color: var(--text-main);
 }
 
-/* カテゴリーカード一覧（すりガラス効果） */
+/* カテゴリーカード */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -175,7 +172,7 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
   border-color: rgba(37, 99, 235, 0.3);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .menu-card:hover::before {
@@ -241,8 +238,40 @@ body {
 .lead-text {
   font-size: 1.1rem;
   margin-bottom: 32px;
-  color: #334155;
+  color: #1e293b;
   font-weight: 500;
+}
+
+/* 稼働時間・概要ボックス */
+.service-meta-box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 28px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+}
+
+.service-meta-box h3 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.meta-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.meta-list li {
+  font-size: 0.92rem;
+  color: var(--text-sub);
+}
+
+.meta-list strong {
+  color: var(--text-main);
 }
 
 .detail-card-grid, .timeline, .works-list, .services-grid {
@@ -250,7 +279,7 @@ body {
   gap: 20px;
 }
 
-.detail-card-grid {
+.detail-card-grid, .services-grid {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
@@ -290,7 +319,7 @@ body {
 
 .work-link {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent);
   text-decoration: none;
   display: inline-block;
@@ -302,7 +331,7 @@ body {
 }
 
 .price {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--accent);
   display: block;
@@ -372,7 +401,7 @@ body {
 .form-field input, .form-field textarea {
   width: 100%;
   padding: 14px 18px;
-  background: rgba(248, 250, 252, 0.8);
+  background: rgba(248, 250, 252, 0.9);
   border: 1px solid var(--card-border);
   border-radius: 10px;
   color: var(--text-main);
