@@ -6,7 +6,7 @@
   <title>Koki Okada — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style1.css">
 </head>
 <body>
@@ -28,6 +28,7 @@
       </header>
 
       <main class="container">
+        <!-- 写真入りメインカード -->
         <section class="hero">
           <p class="hero-tag">Web Writer / Content Creator</p>
           <h1 class="hero-title">実体験に基づく一次情報と、<br>論理的思考で成果を生むライティング。</h1>
@@ -57,7 +58,7 @@
           </div>
         </section>
 
-        <!-- そのまま下にスクロールするとある「Contact」 -->
+        <!-- Contact -->
         <section id="contact" class="section-contact">
           <h2 class="section-label">05 / Contact</h2>
           <div class="contact-wrapper">
@@ -92,12 +93,12 @@
       </footer>
     </div>
 
-    <!-- 3. 各項目の切り替え詳細画面 -->
+    <!-- 3. 各項目の詳細画面 -->
 
     <!-- About 画面 -->
     <div id="view-about" class="view detail-view">
       <div class="container">
-        <button class="back-btn" onclick="switchView('home')">← Back to Menu</button>
+        <button class="back-btn" onclick="switchView('home')">← メニューへ戻る</button>
         <h2 class="detail-title">01 / About Me</h2>
         <div class="detail-body">
           <p class="lead-text">実体験に基づく説得力のある執筆と、情報コースで培ったIT知識・生成AIを活用した効率的なリサーチ力を強みとしています。</p>
@@ -122,7 +123,7 @@
     <!-- Career 画面 -->
     <div id="view-experience" class="view detail-view">
       <div class="container">
-        <button class="back-btn" onclick="switchView('home')">← Back to Menu</button>
+        <button class="back-btn" onclick="switchView('home')">← メニューへ戻る</button>
         <h2 class="detail-title">02 / Career & Experience</h2>
         <div class="detail-body">
           <div class="timeline">
@@ -162,7 +163,7 @@
     <!-- Works 画面 -->
     <div id="view-works" class="view detail-view">
       <div class="container">
-        <button class="back-btn" onclick="switchView('home')">← Back to Menu</button>
+        <button class="back-btn" onclick="switchView('home')">← メニューへ戻る</button>
         <h2 class="detail-title">03 / Works</h2>
         <div class="detail-body">
           <div class="works-list">
@@ -170,13 +171,13 @@
               <span class="work-cat">構成・執筆 | Note</span>
               <h3>【ジム不要】芋顔から「見た目変わったね」と褒められた自重トレ戦略</h3>
               <p>自身の失敗談をもとに、継続率を劇的に上げるコツを論理的に整理した実体験ノウハウ記事。</p>
-              <a href="#" class="work-link">Read Article ↗</a>
+              <a href="#" class="work-link">記事を読む ↗</a>
             </article>
             <article class="work-item">
               <span class="work-cat">リサーチ・執筆 | Sample</span>
               <h3>Webライター向けポートフォリオ活用ガイド</h3>
               <p>GitHub Pagesを活用して企業からの直接受注を狙うための解説コンテンツ。</p>
-              <a href="#" class="work-link">Read Article ↗</a>
+              <a href="#" class="work-link">記事を読む ↗</a>
             </article>
           </div>
         </div>
@@ -186,7 +187,7 @@
     <!-- Services 画面 -->
     <div id="view-services" class="view detail-view">
       <div class="container">
-        <button class="back-btn" onclick="switchView('home')">← Back to Menu</button>
+        <button class="back-btn" onclick="switchView('home')">← メニューへ戻る</button>
         <h2 class="detail-title">04 / Services & Price</h2>
         <div class="detail-body">
           <div class="services-grid">
@@ -207,9 +208,8 @@
 
   </div>
 
-  <!-- JS処理：アニメーションと画面切り替え -->
+  <!-- JavaScript -->
   <script>
-    // ページ読み込み後のオープニングアニメーション
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         const opening = document.getElementById('opening');
@@ -219,12 +219,10 @@
         setTimeout(() => {
           opening.style.display = 'none';
           mainContent.classList.remove('hidden');
-          mainContent.classList.add('fade-in');
         }, 800);
-      }, 1800); // 1.8秒間名前を表示
+      }, 1800);
     });
 
-    // 画面切り替え（SPA風）の処理
     function switchView(viewName) {
       const views = document.querySelectorAll('.view');
       views.forEach(v => {
@@ -233,14 +231,13 @@
 
       if (viewName === 'home') {
         document.getElementById('home-view').classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         const targetView = document.getElementById('view-' + viewName);
         if (targetView) {
           targetView.classList.add('active');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 </body>
