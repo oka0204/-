@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+　<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- 1. オープニングアニメーション（名前のフェードアウト） -->
+  <!-- 1. オープニングアニメーション -->
   <div id="opening" class="opening">
     <h1 class="opening-name">KOKI OKADA</h1>
   </div>
@@ -28,7 +28,7 @@
       </header>
 
       <main class="container">
-        <!-- 写真入りメインカード -->
+        <!-- ヒーローエリア -->
         <section class="hero">
           <p class="hero-tag">Web Writer / Content Creator</p>
           <h1 class="hero-title">実体験に基づく一次情報と、<br>論理的思考で成果を生むライティング。</h1>
@@ -54,7 +54,7 @@
           <div class="menu-card" onclick="switchView('services')">
             <span class="menu-num">04</span>
             <h2>Services & Price</h2>
-            <p>対応業務内容・料金ガイドライン</p>
+            <p>対応業務・目安料金・稼働時間</p>
           </div>
         </section>
 
@@ -160,7 +160,7 @@
       </div>
     </div>
 
-    <!-- Works 画面 -->
+    <!-- Works 画面（リンク修正完了） -->
     <div id="view-works" class="view detail-view">
       <div class="container">
         <button class="back-btn" onclick="switchView('home')">← メニューへ戻る</button>
@@ -171,37 +171,62 @@
               <span class="work-cat">構成・執筆 | Note</span>
               <h3>【ジム不要】芋顔から「見た目変わったね」と褒められた自重トレ戦略</h3>
               <p>自身の失敗談をもとに、継続率を劇的に上げるコツを論理的に整理した実体験ノウハウ記事。</p>
-              <a href="#" class="work-link">記事を読む ↗</a>
+              <!-- 実際のNoteリンクを設定 -->
+              <a href="https://note.com/koki_okada/n/n4ed2ad993683" target="_blank" rel="noopener noreferrer" class="work-link">記事を読む ↗</a>
             </article>
             <article class="work-item">
-              <span class="work-cat">リサーチ・執筆 | Sample</span>
+              <span class="work-cat">リサーチ・執筆 | Portfolio Sample</span>
               <h3>Webライター向けポートフォリオ活用ガイド</h3>
-              <p>GitHub Pagesを活用して企業からの直接受注を狙うための解説コンテンツ。</p>
-              <a href="#" class="work-link">記事を読む ↗</a>
+              <p>GitHub Pagesを活用して企業からの直接受注を狙うための解説コンテンツ（サンプル記事）。</p>
+              <a href="#contact" onclick="switchView('home')" class="work-link">執筆サンプルを請求する ↗</a>
             </article>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Services 画面 -->
+    <!-- Services 画面（料金体系・記事単価・稼働時間を追加） -->
     <div id="view-services" class="view detail-view">
       <div class="container">
         <button class="back-btn" onclick="switchView('home')">← メニューへ戻る</button>
         <h2 class="detail-title">04 / Services & Price</h2>
         <div class="detail-body">
+          
+          <!-- 稼働時間・納期の案内 -->
+          <div class="service-meta-box">
+            <h3>稼働時間・コミュニケーション</h3>
+            <ul class="meta-list">
+              <li><strong>稼働時間：</strong>週 15〜20 時間（平日夜間・土日祝メイン）</li>
+              <li><strong>返信対応：</strong>原則 24時間以内にご返信いたします</li>
+              <li><strong>想定納期：</strong>構成案作成（2〜3日）、本文執筆 3,000文字（3〜5日）</li>
+              <li><strong>対応ツール：</strong>Slack, Discord, Chatwork, Google Workspace</li>
+            </ul>
+          </div>
+
+          <!-- 料金表（文字単価・記事単価・オプション） -->
           <div class="services-grid">
             <div class="service-box">
-              <h3>記事執筆・構成</h3>
-              <p>SEO記事、コラム、実体験レポートの構成案作成〜本文執筆。</p>
+              <h3>記事執筆（文字単価）</h3>
+              <p>SEO記事、ブログ記事、実体験コラムの執筆業務。</p>
               <span class="price">1.0円〜 / 文字</span>
             </div>
             <div class="service-box">
-              <h3>Markdown / WP入稿</h3>
-              <p>WordPressやMarkdown形式での直接入稿・装飾まで一元対応。</p>
-              <span class="price">お気軽にご相談ください</span>
+              <h3>記事パッケージ（記事単価目安）</h3>
+              <p>構成案作成 ＋ 本文執筆（約 3,000〜4,000文字）を一括対応。</p>
+              <span class="price">5,000円〜 / 1記事</span>
+            </div>
+            <div class="service-box">
+              <h3>構成案作成のみ</h3>
+              <p>KW選定、競合調査、ペルソナ設定に基づく構成案（見出し設計）の作成。</p>
+              <span class="price">2,000円〜 / 1構成</span>
+            </div>
+            <div class="service-box">
+              <h3>入稿・装飾対応</h3>
+              <p>WordPress直接入稿、Markdown形式納品、画像選定・装飾対応。</p>
+              <span class="price">＋1,000円〜 / 1記事</span>
             </div>
           </div>
+
         </div>
       </div>
     </div>
