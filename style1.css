@@ -1,10 +1,10 @@
 :root {
-  --bg-main: #f8fafc;        /* 清潔感のある明るい背景色 */
-  --card-bg: rgba(255, 255, 255, 0.85);
-  --card-border: rgba(226, 232, 240, 0.8);
-  --text-main: #0f172a;      /* 深みのあるダークネイビー（文字色） */
-  --text-sub: #64748b;       /* 落ち着いたグレー */
-  --accent: #2563eb;         /* 洗練されたロイヤルブルー */
+  --bg-main: #f8fafc;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-border: rgba(255, 255, 255, 0.8);
+  --text-main: #0f172a;
+  --text-sub: #64748b;
+  --accent: #2563eb;
   --accent-light: #eff6ff;
   --font-base: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -17,14 +17,14 @@
 
 body {
   font-family: var(--font-base);
-  background-color: #f8fafc;
+  background-color: var(--bg-main);
   color: var(--text-main);
   line-height: 1.8;
   letter-spacing: 0.02em;
   overflow-x: hidden;
   min-height: 100vh;
 
-  /* 背景に「ふんわりした光」と「立体的なグラデーション」を追加 */
+  /* 背景に「ふんわりした光」と「立体的な多重グラデーション」を配置 */
   background-image: 
     radial-gradient(at 15% 15%, rgba(37, 99, 235, 0.08) 0px, transparent 40%),
     radial-gradient(at 85% 20%, rgba(99, 102, 241, 0.06) 0px, transparent 40%),
@@ -33,7 +33,6 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
-
 
 .container {
   max-width: 880px;
@@ -107,7 +106,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* ヒーローエリア（写真背景入り） */
+/* ヒーローエリア（写真背景＋オーバレイ） */
 .hero {
   position: relative;
   border-radius: 20px;
@@ -115,11 +114,11 @@ body {
   padding: 56px 36px;
   margin-bottom: 40px;
   border: 1px solid var(--card-border);
-  /* おしゃれなフリー画像と白系オーバレイ */
   background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 100%),
               url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .hero-tag {
@@ -138,7 +137,7 @@ body {
   color: var(--text-main);
 }
 
-/* カテゴリーカード一覧 */
+/* カテゴリーカード一覧（すりガラス効果） */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -147,12 +146,14 @@ body {
 }
 
 .menu-card {
-  background: #ffffff;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--card-border);
   padding: 32px 28px;
   border-radius: 16px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -174,6 +175,7 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
   border-color: rgba(37, 99, 235, 0.3);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .menu-card:hover::before {
@@ -207,7 +209,8 @@ body {
 }
 
 .back-btn {
-  background: #ffffff;
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--card-border);
   padding: 10px 22px;
   border-radius: 30px;
@@ -231,7 +234,7 @@ body {
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 32px;
-  border-bottom: 2px solid var(--card-border);
+  border-bottom: 2px solid rgba(226, 232, 240, 0.8);
   padding-bottom: 16px;
 }
 
@@ -252,11 +255,13 @@ body {
 }
 
 .detail-box, .timeline-item, .work-item, .service-box {
-  background: #ffffff;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--card-border);
   padding: 28px;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
 }
 
 .detail-box h3, .timeline-item h3, .work-item h3, .service-box h3 {
@@ -322,11 +327,13 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  background: #ffffff;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--card-border);
   padding: 36px;
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
 }
 
 .contact-direct p {
@@ -365,13 +372,13 @@ body {
 .form-field input, .form-field textarea {
   width: 100%;
   padding: 14px 18px;
-  background: var(--bg-main);
+  background: rgba(248, 250, 252, 0.8);
   border: 1px solid var(--card-border);
   border-radius: 10px;
   color: var(--text-main);
   font-family: inherit;
   font-size: 0.9rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
 .form-field input:focus, .form-field textarea:focus {
@@ -400,7 +407,7 @@ body {
 
 .footer {
   padding: 40px 0;
-  border-top: 1px solid var(--card-border);
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
   font-size: 0.85rem;
   color: var(--text-sub);
   text-align: center;
